@@ -49,14 +49,14 @@ public class FullInfoStation {
                 }
             }
             for(DateOfFoundation date : dates){
-                if(s.getName().equals(date.getName())){
+                if(s.getName().equalsIgnoreCase(date.getName())){
                     dateOfFoundation = date.getDate();
                     date.setName("used");
                     break;
                 }
             }
             for(DepthOfStations depth : depths){
-                if(s.getName().equals(depth.getStation_name())){
+                if(s.getName().equalsIgnoreCase(depth.getStation_name())){
                     depthOfStation = depth.getDepth();
                     depth.setStation_name("used");
                     break;
